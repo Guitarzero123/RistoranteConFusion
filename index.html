@@ -34,7 +34,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class=" fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginLink">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -179,7 +179,7 @@
                     <!-- data-toggle="tooltip" data-html="true" title="Or call us at <br><strong>+852 12345678</strong>" data-placement="bottom" -->
                     <!-- href property from old reservation form -->
                     <!-- href="#reserveform" -->
-                    <a class="btn btn-warning btn-block btn-sm" role="button" data-toggle="modal" data-target="#reservationModal">Reserve Table</a>
+                    <a class="btn btn-warning btn-block btn-sm" id="reserveButton" role="button">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -404,9 +404,10 @@
         });
         */
 
-        //Carousel Buttons
+        
         $().ready(function() {
 
+            //Carousel Buttons
             $('#mycarousel').carousel({interval: 2000});
 
             $('#carouselButton').click(function() {
@@ -420,8 +421,18 @@
                     $('#carouselButton').children('span').addClass('fa-pause');
                 }
             });
+
+            //Reservation Button
+            $('#reserveButton').click(function() {
+                $('#reservationModal').modal('toggle');
+            });
+
+            //Login Link
+            $('#loginLink').click(function() {
+                $('#loginModal').modal('toggle');
+            });
+
         });
     </script>
 </body>
-
 </html>

@@ -76,3 +76,23 @@ body {
    bottom: 0px;
    position: absolute; 
 }
+
+.modal-header {
+    background-color: $background-dark;
+    
+    h4 {
+        color: floralwhite;
+    }
+
+    button {
+        color: floralwhite;
+    }
+
+    button:hover {
+        color: floralwhite;
+    }
+}
+
+.modal-body {
+    background-color: $background-pale;
+}
