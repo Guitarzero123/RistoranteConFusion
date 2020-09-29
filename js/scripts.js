@@ -4,7 +4,6 @@ $(function(){
 });
 */
 
-
 $(function() {
 
 //Carousel Buttons
